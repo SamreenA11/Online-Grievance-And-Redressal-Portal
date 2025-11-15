@@ -26,7 +26,7 @@ const Index = () => {
       <main className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-info bg-clip-text text-transparent">
-            Online Complaint & Grievance Management System
+            Online Grievance and Redressal Portal
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A modern, efficient platform for submitting, tracking, and resolving complaints with transparency and accountability.

@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getUserComplaints, initializeDemoData } from "@/lib/storage";
-import { FileText, Clock, CheckCircle, AlertCircle, Plus, List, MessageSquare, LogOut } from "lucide-react";
+import { FileText, Clock, CheckCircle, AlertCircle, Plus, List, MessageSquare, LogOut, Search } from "lucide-react";
 
 const UserDashboard = () => {
   const { user, logout } = useAuth();
@@ -103,7 +103,7 @@ const UserDashboard = () => {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => navigate("/user/submit-complaint")}>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -115,6 +115,21 @@ const UserDashboard = () => {
               <p className="text-muted-foreground">Submit a new grievance or complaint</p>
               <Button className="mt-4 w-full">
                 Submit Complaint
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => navigate("/user/view-complaints")}>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Search className="h-5 w-5" />
+                Track Status
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">Monitor and track your complaint status</p>
+              <Button variant="outline" className="mt-4 w-full">
+                Track Complaints
               </Button>
             </CardContent>
           </Card>
